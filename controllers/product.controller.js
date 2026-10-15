@@ -52,17 +52,6 @@ export const getProduct = async (req, res) => {
       ];
     }
 
-    if (maxPrice !== undefined || minPrice !== undefined) {
-      filter.price = {};
-
-      if (maxPrice !== undefined) {
-        filter.price.$lte = Number(maxPrice);
-      }
-      if (minPrice !== undefined) {
-        filter.price.$gte = Number(minPrice);
-      }
-    }
-
     const totalProducts = await Product.countDocuments(filter);
 
     const products = await Product.find(filter)
