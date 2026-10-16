@@ -1,0 +1,25 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install and test (CI)
+        run: |
+          npm ci
+          npm test
+
+      - name: Deploy (CD)
+        run: |
+          cd /var/www/myapp
+          git pull origin main
+          npm ci
+          pm2 reload myapp --update-env
+          pm2 save
