@@ -18,7 +18,7 @@ app.use("/api/v1", router);
 
 // SERVER RESPONSE
 app.get("/", (req, res) => {
-  res.send("Hey! Buddy, This Product CRUD SERVER.");
+  res.send("Hey! This is Nahid Server.");
 });
 
 app.listen(PORT, () => {
