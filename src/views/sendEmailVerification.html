@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>${headerCategory}</title>
+    <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+    <![endif]-->
+    <style>
+      @media only screen and (max-width: 600px) {
+        .email-wrapper {
+          padding: 16px 8px !important;
+        }
+        .email-card {
+          border-radius: 8px !important;
+        }
+        .email-content {
+          padding: 28px 20px !important;
+        }
+        .email-header {
+          padding: 24px 20px 16px 20px !important;
+        }
+        .otp-display {
+          font-size: 28px !important;
+          letter-spacing: 6px !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      font-family:
+        -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto,
+        &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+    "
+  >
+    <!-- Hidden preview text for inbox clients -->
+    <div
+      style="display: none; max-height: 0px; overflow: hidden; mso-hide: all"
+    >
+      ${previewText}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+    </div>
+
+    <table
+      role="presentation"
+      class="email-wrapper"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        background-color: #f8fafc;
+        width: 100%;
+        margin: 0;
+        padding: 40px 12px;
+      "
+    >
+      <tr>
+        <td align="center">
+          <!-- Main Card Container -->
+          <table
+            role="presentation"
+            class="email-card"
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              max-width: 560px;
+              background-color: #ffffff;
+              border-radius: 12px;
+              overflow: hidden;
+              border: 1px solid #e2e8f0;
+              box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+            "
+          >
+            <!-- Top Accent Line -->
+            <tr>
+              <td style="height: 3px; background-color: #0f172a"></td>
+            </tr>
+
+            <!-- Brand Header -->
+            <tr>
+              <td
+                class="email-header"
+                align="left"
+                style="
+                  padding: 32px 40px 16px 40px;
+                  border-bottom: 1px solid #f1f5f9;
+                "
+              >
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td>
+                      <div
+                        style="
+                          font-size: 18px;
+                          font-weight: 800;
+                          letter-spacing: 1px;
+                          color: #0f172a;
+                          text-transform: uppercase;
+                        "
+                      >
+                        ${appName}
+                      </div>
+                    </td>
+                    <td align="right">
+                      <span
+                        style="
+                          font-size: 11px;
+                          font-weight: 600;
+                          letter-spacing: 1.2px;
+                          text-transform: uppercase;
+                          color: #64748b;
+                          background-color: #f1f5f9;
+                          padding: 4px 10px;
+                          border-radius: 4px;
+                        "
+                      >
+                        ${headerCategory}
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Main Content Body -->
+            <tr>
+              <td class="email-content" style="padding: 32px 40px 36px 40px">
+                ${contentHtml}
+
+                <!-- Security Warning Callout -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="
+                    background-color: #f8fafc;
+                    border-left: 3px solid #0f172a;
+                    border-radius: 0 6px 6px 0;
+                    margin-top: 32px;
+                  "
+                >
+                  <tr>
+                    <td
+                      style="
+                        padding: 14px 16px;
+                        font-size: 13px;
+                        line-height: 20px;
+                        color: #475569;
+                      "
+                    >
+                      <strong style="color: #0f172a">Security Advisory:</strong>
+                      Never share this code or link with anyone. The ${appName}
+                      team will never contact you asking for your verification
+                      code.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                style="
+                  background-color: #ffffff;
+                  border-top: 1px solid #f1f5f9;
+                  padding: 24px 40px;
+                  text-align: center;
+                "
+              >
+                <p
+                  style="
+                    margin: 0 0 6px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #64748b;
+                  "
+                >
+                  This is an automated notification from ${appName}. Please do
+                  not reply directly to this message.
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #94a3b8;
+                  "
+                >
+                  &copy; ${currentYear} ${appName}. All rights reserved.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
